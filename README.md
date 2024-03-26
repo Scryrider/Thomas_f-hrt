@@ -12,3 +12,6 @@ BLE Controller MAC: A4:53:85:A7:4F:AE
 `pair A4:53:85:A7:4F:AE` beim ertsen mal
 
 wenn einmal gepairt ist: `disconnect A4:53:85:A7:4F:AE` oder `connect A4:53:85:A7:4F:AE`
+
+# Literatur
+https://www.hackster.io/Infineon_Team/control-everything-with-a-gaming-controller-60d89b

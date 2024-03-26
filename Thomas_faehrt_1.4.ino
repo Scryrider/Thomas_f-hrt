@@ -97,6 +97,7 @@ void loop() {
      //   offset -= 1;
      // }
 
+      // --- Definiert den Maximalen Lenkeinschlag! ---
       //steer = steer + offset; // incorporate trim into steer command
       if (steer > 200) steer = 200; // enforce upper limit
       if (steer < 74) steer = 74 ; // enforce lower limit
@@ -105,12 +106,14 @@ void loop() {
     }
     else
     {
+      //grade aus fahren
       Lenkung.write(90);
     }
 
 
     if (PS4.getAnalogHat(LeftHatX) > 137 || PS4.getAnalogHat(LeftHatX) < 117 || PS4.getAnalogHat(LeftHatY) > 137 || PS4.getAnalogHat(LeftHatY) < 117 || PS4.getAnalogHat(RightHatX) > 137 || PS4.getAnalogHat(RightHatX) < 117 || PS4.getAnalogHat(RightHatY) > 137 || PS4.getAnalogHat(RightHatY) < 117)
     {
+      // --- fahren ---
       drive = PS4.getAnalogHat(RightHatY);
       if (drive > 170) drive = 170; // enforce upper limit
       if (drive < 84) drive = 84; // enforce lower limit
